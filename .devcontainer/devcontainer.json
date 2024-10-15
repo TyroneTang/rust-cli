@@ -1,0 +1,15 @@
+{
+    "name": "rust-cli-app",
+    "dockerComposeFile": "../compose/compose.yaml",
+    "service": "rust_dev",
+    "runServices": [
+        "rust_dev"
+    ],
+    "workspaceFolder": "/root/rust",
+    "customizations": {
+        "vscode": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "extensions": []
+        }
+    }
+}

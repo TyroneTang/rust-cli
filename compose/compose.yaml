@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  rust_dev:
+    container_name: rust_dev
+    image: rust_base:local_latest
+    working_dir: /root/rust
+    network_mode: "host"
+    privileged: true
+    stdin_open: true
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - ALL
+    volumes:
+      - $HOME/.gitconfig:/root/rust
+      - $HOME/etc/ssl/certs:/etc/ssl/certs
+      - $PWD/:/root/rust
+      - $HOME/Documents/oh_my_posh:/root/Documents/oh_my_posh
+      - $HOME/.bashrc:/root/.bashrc
+    
